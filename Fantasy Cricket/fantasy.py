@@ -3,13 +3,15 @@ from tkinter import filedialog
 import re
 
 root = Tk()
+root.minsize(150,200)
 root.title("Fantasy Gaming")
 
-def getBowlerPts(bowler,players):
+def getBowlerPts(bowler,players,wickets):
   i=0
   while i<len(bowler):
     if bowler[i].strip()=="b":
       players[bowler[i+1].strip()] = players.get(bowler[i+1].strip(),0) + 25
+      wickets[bowler[i+1].strip()] = wickets.get(bowler[i+1].strip(),0) + 1
     elif bowler[i].strip()=="st":
       players[bowler[i+1].strip()] = players.get(bowler[i+1].strip(),0) + 10
     elif bowler[i].strip()=="run out":
@@ -34,9 +36,9 @@ def cleanDict(dict):
 
 def printDict(dict):
   text = []
-  text.append("{:<30}\t{:<5}\n\n".format('players','points'))
+  text.append("{:<30}\t{:<7}\n\n".format('players','points'))
   for i in dict:
-    text.append("{:<30}\t{:<5}\n".format(i,dict[i]))
+    text.append("{:<30}\t{:<7}\n".format(i,dict[i]))
   return ''.join(text)
 
 def clear():
@@ -47,6 +49,7 @@ def openfile():
   count=0
   bat_name=""
   players={}
+  wickets={}
   with open(root.filename,'r') as f:
     lines = f.readlines()
     for line in lines:
@@ -55,7 +58,7 @@ def openfile():
         bat_name = bat_name.strip()
       elif count%7==1:
         bowler = re.split('(^c\s|\sb\s|^b\s|^st\s|\sst\s|^run out\s)',line)
-        getBowlerPts(bowler,players)
+        getBowlerPts(bowler,players,wickets)
       elif count%7==2:
         runs = int(line)
         players[bat_name] = players.get(bat_name,0) + runs*2 + 25*(runs>=50) + 25*(runs>=100)
@@ -64,6 +67,11 @@ def openfile():
         players[bat_name] = players.get(bat_name,0) - balls
       count+=1
   new = {}
+  for i in wickets:
+    if wickets[i]>=3:
+      players[i] = players[i] + 25
+    if wickets[i]>=5:
+      players[i] = players[i] + 25
   new = cleanDict(players)
   text = printDict({k: v for k, v in sorted(new.items(), key=lambda item: item[1],reverse=True)})
   global my_label
