@@ -1,0 +1,120 @@
+Jaiswal
+c and b D Chahar
+6
+6
+1
+0
+100.00
+Steven Smith (c)
+c Kedar Jadhav b Sam Curran
+69
+47
+4
+4
+146.81
+Samson (wk)
+c D Chahar b Lungi Ngidi
+74
+32
+1
+9
+231.25
+Miller
+run out (Ruturaj Gaikwad/Kedar Jadhav)
+0
+0
+0
+0
+0.00
+Uthappa
+c du Plessis b Chawla
+5
+9
+0
+0
+55.56
+Rahul Tewatia
+lbw b Sam Curran
+10
+8
+1
+0
+125.00
+Riyan Parag
+c Dhoni b Sam Curran
+6
+4
+1
+0
+150.00
+Tom Curran
+not out
+10
+9
+1
+0
+111.11
+Jofra Archer
+not out
+27
+8
+0
+4
+337.50
+Murali Vijay
+c Tom Curran b Shreyas Gopal
+21
+21
+3
+0
+100.00
+Shane Watson
+b Rahul Tewatia
+33
+21
+1
+4
+157.14
+Faf du Plessis
+c Samson b Jofra Archer
+72
+37
+1
+7
+194.59
+Sam Curran
+st Samson b Rahul Tewatia
+17
+6
+1
+2
+283.33
+Ruturaj Gaikwad
+st Samson b Rahul Tewatia
+0
+1
+0
+0
+0.00
+Kedar Jadhav
+c Samson b Tom Curran
+22
+16
+3
+0
+137.50
+MS Dhoni (c) (wk)
+not out
+29
+17
+0
+3
+170.59
+Ravindra Jadeja
+not out
+1
+2
+0
+0
+50.00
+

@@ -1,0 +1,120 @@
+de Kock (wk)
+c Nikhil Naik b Shivam Mavi
+1
+3
+0
+0
+33.33
+Rohit (c)
+c Cummins b Shivam Mavi
+80
+54
+3
+6
+148.15
+Suryakumar Yadav
+run out (Narine/Morgan)
+47
+28
+6
+1
+167.86
+Saurabh Tiwary
+c Cummins b Narine
+21
+13
+1
+1
+161.54
+Hardik Pandya
+hit wkt b Russell
+18
+13
+2
+1
+138.46
+Pollard
+not out
+13
+7
+1
+0
+185.71
+Krunal Pandya
+not out
+1
+3
+0
+0
+33.33
+Shubman Gill
+c Pollard b Boult
+7
+11
+1
+0
+63.64
+Sunil Narine
+c de Kock b James Pattinson
+9
+10
+0
+1
+90.00
+Dinesh Karthik (c) (wk)
+lbw b Rahul Chahar
+30
+23
+5
+0
+130.43
+Nitish Rana
+c Hardik Pandya b Pollard
+24
+18
+2
+1
+133.33
+Eoin Morgan
+c de Kock b Bumrah
+16
+20
+1
+1
+80.00
+Andre Russell
+b Bumrah
+11
+11
+2
+0
+100.00
+Nikhil Naik
+c Hardik Pandya b Boult
+1
+3
+0
+0
+33.33
+Pat Cummins
+c Hardik Pandya b James Pattinson
+33
+12
+1
+4
+275.00
+Shivam Mavi
+st de Kock b Rahul Chahar
+9
+10
+1
+0
+90.00
+Kuldeep Yadav
+not out
+1
+2
+0
+0
+50.00
+
