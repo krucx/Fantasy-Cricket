@@ -54,7 +54,7 @@ def openfile():
         bat_name = re.sub(r'\([^)]*\)', '', line)
         bat_name = bat_name.strip()
       elif count%7==1:
-        bowler = re.split('(^c\s|\sb\s|^b\s|^st\s|^run out\s)',line)
+        bowler = re.split('(^c\s|\sb\s|^b\s|^st\s|\sst\s|^run out\s)',line)
         getBowlerPts(bowler,players)
       elif count%7==2:
         runs = int(line)
