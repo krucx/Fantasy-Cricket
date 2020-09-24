@@ -5,9 +5,7 @@ import re
 root = Tk()
 root.title("Fantasy Gaming")
 
-players={}
-
-def getBowlerPts(bowler):
+def getBowlerPts(bowler,players):
   i=0
   while i<len(bowler):
     if bowler[i].strip()=="b":
@@ -57,7 +55,7 @@ def openfile():
         bat_name = bat_name.strip()
       elif count%7==1:
         bowler = re.split('(^c\s|\sb\s|^b\s|^st\s|^run out\s)',line)
-        getBowlerPts(bowler)
+        getBowlerPts(bowler,players)
       elif count%7==2:
         runs = int(line)
         players[bat_name] = players.get(bat_name,0) + runs*2 + 25*(runs>=50) + 25*(runs>=100)
