@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<div style="margin-left: 30%; margin-top: 50px;width: 40%; text-align: center;">
+    <div>
+    </div>
+    <div>
+    </div>
+    <legend class='border-bottom mb-4' style="text-align: center;">Rules</legend>
+    <div style="align-content: center;">
+            BATTING
+            <ul>
+                <li>25 POINTS FOR HALF CENTURY</li>
+                <li>50 POINTS FOR CENTURY</li>
+                <li>RUNS - BALLS : FOR EG- IF 50(53) => 47 POINTS +25, 
+                    IF 50(47) => 53+25</li>
+            </ul>
+            BOWLING
+            <ul>
+                <li>25 FOR 3-4 WICKETS</li>
+                <li>50 FOR 5+ WICKETS</li>
+                <li>25 POINTS FOR EACH WICKET</li>
+            </ul>
+            FIELDING
+            <ul>
+                <li>RUN OUT 10 POINTS</li>
+                <li>KEEPER STUMPING 10 POINTS</li>
+            </ul>
+    </div>
+</div>
+
+{% endblock content %}

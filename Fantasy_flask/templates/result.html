@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<div style="margin-left: 30%; margin-top: 50px;width: 40%; text-align: center;">
+    <div>
+    </div>
+    <div>
+    </div>
+    {% if text %}
+    <legend class='border-bottom mb-4' style="text-align: center;">Scores!!</legend>
+    <div style="align-content: center;">
+        <table style="margin: 0 auto; border:1px solid;text-align:center" class="table table-striped">
+            <tr>
+                <td>
+                    Player
+                </td>
+                <td>
+                    Points
+                </td>
+            </tr>
+
+            {% for i in text %}
+            <tr>
+                <td>
+                    {{ i[0] }}
+                </td>
+                <td>
+                    {{ i[1] }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock content %}
