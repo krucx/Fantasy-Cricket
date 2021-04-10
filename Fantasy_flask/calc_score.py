@@ -55,10 +55,10 @@ def cleanDict(dict):
     newDict = {}
     for i in dict:
         if len(i.split())>1:
-            if dict.get(i.split()[-1],-1000) == -1000:
+            if dict.get(' '.join(i.split()[1:]),-1000) == -1000:
                 newDict[i]=dict[i]
             else:
-                newDict[i.split()[-1]] = dict[i]+dict[i.split()[-1]]
+                newDict[' '.join(i.split()[1:])] = dict[i]+dict[' '.join(i.split()[1:])]
         else:
             newDict[i]=dict[i]
     return newDict
@@ -70,7 +70,19 @@ def printDict(dict):
         text.append([i,dict[i]])
     return text
 
-def openfile(f,innings):
+def mom(link,players):
+    mom_link = link.replace('live-cricket-scorecard','live-cricket-scores')
+    html_text = requests.get(mom_link).text
+    soup = BeautifulSoup(html_text,'lxml')
+    try:
+        x = soup.find("a",class_="cb-link-undrln").text.strip()
+        if players.get(x,-1000) != -1000:
+            players[x]+=15
+    except:
+        return
+
+
+def openfile(f,innings,link):
     count=0
     bat_name=""
     players={}
@@ -95,7 +107,7 @@ def openfile(f,innings):
             players[i] = players[i] + 25
         if wickets[i]>=5:
             players[i] = players[i] + 25
-
+    mom(link,players)
     new = cleanDict(players)
     text = printDict({k: v for k, v in sorted(new.items(), key=lambda item: item[1],reverse=True)})
     return text

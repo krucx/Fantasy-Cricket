@@ -12,7 +12,7 @@ def home():
     form = CricketForm()
     if form.validate_on_submit():
         f = Get_text(form.url.data,form.innings.data)
-        text = openfile(f,form.innings.data)
+        text = openfile(f,form.innings.data,form.url.data)
         return render_template('result.html',text=text)
     return render_template('home.html',form=form)
 
